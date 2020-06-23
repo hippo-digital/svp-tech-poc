@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'user-details' => 'home#user_details'
+  get 'check_your_answers' => 'check_your_answers#show'
   get '/logout' => 'oidc#logout'
 
   get 'auth/oidc', as: 'authentication'

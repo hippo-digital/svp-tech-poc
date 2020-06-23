@@ -1,0 +1,50 @@
+<% content_for :title do %><%= t("check_your_answers.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("check_your_answers.title") %>" />
+<% end %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("check_your_answers.title"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= tag.p t("check_your_answers.description"), class: "govuk-body" %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("check_your_answers.nhs_user_info_summary"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/summary_list", {
+  items: nhs_user_info_summary,
+} %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("check_your_answers.form_info_heading"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/summary_list", {
+  items: form_questions_summary,
+} %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("check_your_answers.send_heading"),
+  heading_level: 2,
+  margin_bottom: 3,
+} %>
+
+<%= tag.p t("check_your_answers.confirmation"), class: "govuk-inset-text" %>
+
+<%= form_tag({},
+  "data-module": "track-svp-check-your-answers",
+  "id": "check_your_answers",
+  "novalidate": "true"
+) do %>
+  <%= render "govuk_publishing_components/components/button",
+    text: t("check_your_answers.submit"),
+    margin_bottom: true %>
+<% end %>
