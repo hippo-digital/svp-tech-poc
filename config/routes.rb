@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
+  get 'address' => 'address#show'
+  post 'address' => 'address#submit'
   root 'home#index'
 
   get 'user-details' => 'home#user_details'

@@ -3,7 +3,7 @@
 class OidcController < ApplicationController
   def callback
     session[:userinfo] = request.env['omniauth.auth'].info
-    redirect_to '/user-details'
+    redirect_to address_url
   end
 
   def failure

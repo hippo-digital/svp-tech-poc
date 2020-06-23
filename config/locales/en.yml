@@ -30,4 +30,29 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  questions:
+    address:
+      title: What is your address?
+      hint: Fill out your full address in the below fields
+      building_and_street:
+        label: Building and street
+      building_and_street_line_1:
+        label: Building and street (First line)
+        custom_error: Enter a building and street
+      building_and_street_line_2:
+        label: Building and street (Second line)
+      town_city:
+        label: Town or city
+        custom_error: Enter a town or city
+      county:
+        label: County
+        custom_error: Enter a county
+      postcode:
+        label: Postcode
+        custom_error: Enter a postcode
+  errors:
+    page_title_prefix: 'Error: '
+    heading: "There is a problem"
+    missing_mandatory_text_field: "Enter %{field}"
+    missing_fields: "Enter your date of birth and include a day, month and year"
+    postcode_format: "Enter a real postcode"

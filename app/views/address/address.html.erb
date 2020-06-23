@@ -1,0 +1,86 @@
+<% content_for :title do %>
+  <%= t("questions.address.title") %>
+<% end %>
+
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("questions.address.title") %>" />
+<% end %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("questions.address.title"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/hint", {
+  text: t("questions.address.hint"),
+} %>
+
+<%= form_tag({},
+  "data-module": "track-svp-support-address",
+  "data-question-key": "address",
+  "novalidate": "true"
+) do %>
+<%= render "govuk_publishing_components/components/input", {
+  label: {
+    text: t("questions.address.building_and_street.label")
+  },
+  id: "building_and_street_line_1",
+  name: "building_and_street_line_1",
+  type: "text",
+  error_message: error_items('building_and_street_line_1'),
+  value: @form_responses.dig(:address, :building_and_street_line_1),
+  autocomplete: "address-line1",
+} %>
+
+<label class="govuk-visually-hidden" for="building_and_street_line_2">
+  <%= t("questions.address.building_and_street_line_2.label") %>
+</label>
+<%= render "govuk_publishing_components/components/input", {
+  id: "building_and_street_line_2",
+  name: "building_and_street_line_2",
+  error_message: error_items('building_and_street_line_2'),
+  value: @form_responses.dig(:address, :building_and_street_line_2),
+  autocomplete: "address-line2",
+} %>
+
+<%= render "govuk_publishing_components/components/input", {
+  label: {
+    text: t("questions.address.town_city.label")
+  },
+  id: "town_city",
+  name: "town_city",
+  type: "text",
+  error_message: error_items('town_city'),
+  value: @form_responses.dig(:address, :town_city),
+  width: 20,
+  autocomplete: "address-level2",
+} %>
+
+<%= render "govuk_publishing_components/components/input", {
+  label: {
+    text: t("questions.address.county.label")
+  },
+  id: "county",
+  name: "county",
+  type: "text",
+  error_message: error_items('county'),
+  value: @form_responses.dig(:address, :county),
+  width: 20,
+} %>
+
+<%= render "govuk_publishing_components/components/input", {
+  label: {
+    text: t("questions.address.postcode.label")
+  },
+  id: "postcode",
+  name: "postcode",
+  type: "text",
+  error_message: error_items('postcode'),
+  value: @form_responses.dig(:address, :postcode),
+  width: 10,
+  autocomplete: "postal-code",
+} %>
+
+<%= render "govuk_publishing_components/components/button", text: t("submit_and_next"), margin_bottom: true %>
+<% end %>
