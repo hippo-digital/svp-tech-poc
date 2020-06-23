@@ -4,4 +4,11 @@ class ApplicationController < ActionController::Base
   include HomeHelper
   include ActionView::Helpers::SanitizeHelper
   include FormFlowHelper
+
+  def show
+    @form_responses = session.to_hash.with_indifferent_access
+    respond_to do |format|
+      format.html { render controller_path }
+    end
+  end
 end
