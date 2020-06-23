@@ -50,6 +50,16 @@ en:
       postcode:
         label: Postcode
         custom_error: Enter a postcode
+    help_with_food_delivery:
+      title: Do you need help with food delivery?
+      hint: Do you have, for example, friends or family who can make sure you have enough food.
+      required:
+        options:
+          option_yes:
+            label: "Yes"
+          option_no:
+            label: "No"
+      custom_select_error: Select yes if you have a way of getting food delivered at the moment
   errors:
     page_title_prefix: 'Error: '
     heading: "There is a problem"

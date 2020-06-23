@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   include ActionView::Helpers::SanitizeHelper
   include FormFlowHelper
 
+  helper_method :previous_path
+
   def show
     @form_responses = session.to_hash.with_indifferent_access
     respond_to do |format|

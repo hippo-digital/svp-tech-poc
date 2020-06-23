@@ -1,0 +1,34 @@
+<% content_for :title do %>
+  <%= t("questions.help_with_food_delivery.title") %>
+<% end %>
+
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("questions.help_with_food_delivery.title") %>" />
+<% end %>
+
+    <% content_for :back_link do %>
+      <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+    <% end %>
+
+    <%= form_tag({},
+      "data-module": "track-svp-help-with-food-delivery",
+      "data-question-key": "help_with_food_delivery",
+      "novalidate": "true"
+    ) do %>
+    <%= render "govuk_publishing_components/components/radio", {
+      heading: t("questions.help_with_food_delivery.title"),
+      is_page_heading: true,
+      name: "required",
+      description: t("questions.help_with_food_delivery.hint"),
+      error_message: error_items("help_with_food_delivery"),
+      items: t("questions.help_with_food_delivery.required.options").map.with_index do |(_, item), index|
+        {
+          id: ("required" if index == 0),
+          value: item[:label],
+          text: item[:label],
+          checked: @form_responses[:required] == item[:label],
+        }
+      end
+    } %>
+    <%= render "govuk_publishing_components/components/button", text: t("submit_and_next"), margin_bottom: true %>
+    <% end %>

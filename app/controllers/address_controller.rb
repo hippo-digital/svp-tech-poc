@@ -66,8 +66,4 @@ class AddressController < ApplicationController
       }
     end
   end
-
-  def previous_path
-    date_of_birth_path
-  end
 end
