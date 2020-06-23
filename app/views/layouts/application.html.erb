@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NHS Login Ruby Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "print", media: "print" %>
+</head>
+
+<body class="govuk-template__body">
+<script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+</script>
+<%= render "govuk_publishing_components/components/layout_header", {environment: "public"} %>
+<div class="govuk-width-container">
+  <%= render "govuk_publishing_components/components/phase_banner", {
+      phase: "alpha",
+      class: "govuk-!-margin-9"
+  } %>
+  <main class="govuk-main-wrapper>" id="main-content" role="main">
+    <%= yield %>
+  </main>
+</div>
+<%= render "govuk_publishing_components/components/layout_footer" %>
+<%= javascript_include_tag "application" %>
+</body>
+</html>
