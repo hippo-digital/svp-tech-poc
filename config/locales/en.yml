@@ -43,6 +43,9 @@ en:
     send_heading: Now send your application
     confirmation: By submitting this application you’re confirming that, as far as you know, the details you’re providing are correct.
     submit: Accept and send
+    help_with_food_delivery:
+      required:
+        label: 'Help with food delivery required'
   questions:
     address:
       title: What is your address?
