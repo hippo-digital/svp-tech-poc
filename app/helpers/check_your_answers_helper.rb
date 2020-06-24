@@ -30,7 +30,9 @@ module CheckYourAnswersHelper
       summary_entry(%w[address town_city], t('questions.address.town_city.label'), true),
       summary_entry(%w[address county], t('questions.address.county.label'), true),
       summary_entry(%w[address postcode], t('questions.address.postcode.label'), true),
-      summary_entry(%w[help_with_food_delivery required], t('questions.help_with_food_delivery.required.label'), true)
+      summary_entry(
+        %w[help_with_food_delivery required], t('check_your_answers.help_with_food_delivery.required.label'), true
+      )
     ]
   end
 end
