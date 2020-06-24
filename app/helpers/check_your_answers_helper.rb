@@ -25,8 +25,8 @@ module CheckYourAnswersHelper
 
   def form_questions_summary
     [
-      summary_entry(%w[address building_and_street], t('questions.address.building_and_street.label'), true),
       summary_entry(%w[address building_and_street_line_1], t('questions.address.building_and_street.label'), true),
+      summary_entry(%w[address building_and_street_line_2], t('questions.address.building_and_street.label'), true),
       summary_entry(%w[address town_city], t('questions.address.town_city.label'), true),
       summary_entry(%w[address county], t('questions.address.county.label'), true),
       summary_entry(%w[address postcode], t('questions.address.postcode.label'), true),
