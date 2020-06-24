@@ -35,4 +35,15 @@ module CheckYourAnswersHelper
       )
     ]
   end
+
+  def auto_generated_data_summary
+    [
+      summary_entry(
+        %w[auto_generated_data example_1], t('check_your_answers.auto_generated_data.example_1.label'), false
+      ),
+      summary_entry(
+        %w[auto_generated_data example_1], t('check_your_answers.auto_generated_data.example_1.label'), false
+      )
+    ]
+  end
 end

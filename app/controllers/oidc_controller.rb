@@ -2,6 +2,10 @@
 
 class OidcController < ApplicationController
   def callback
+    session[:auto_generated_data] = {
+      example_1: 'Lorem ipsum est...',
+      example_2: 'Something or other'
+    }
     session[:userinfo] = request.env['omniauth.auth'].info
     redirect_to address_url
   end
