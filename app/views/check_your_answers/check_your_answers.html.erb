@@ -39,12 +39,6 @@
 
 <%= tag.p t("check_your_answers.confirmation"), class: "govuk-inset-text" %>
 
-<%= form_tag({},
-  "data-module": "track-svp-check-your-answers",
-  "id": "check_your_answers",
-  "novalidate": "true"
-) do %>
-  <%= render "govuk_publishing_components/components/button",
-    text: t("check_your_answers.submit"),
-    margin_bottom: true %>
-<% end %>
+<%= render "govuk_publishing_components/components/button",
+  text: t("check_your_answers.submit"),
+  margin_bottom: true %>
