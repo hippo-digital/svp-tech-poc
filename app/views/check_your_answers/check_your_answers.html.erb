@@ -11,8 +11,8 @@
 
 <%= tag.p t("check_your_answers.description"), class: "govuk-body" %>
 
-<%= render "govuk_publishing_components/components/title", {
-  title: t("check_your_answers.nhs_user_info_summary"),
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("check_your_answers.nhs_user_info_summary"),
   margin_top: 0,
   margin_bottom: 3,
 } %>
@@ -21,8 +21,9 @@
   items: nhs_user_info_summary,
 } %>
 
-<%= render "govuk_publishing_components/components/title", {
-  title: t("check_your_answers.form_info_heading"),
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("check_your_answers.form_info_heading"),
+  heading_level: 3,
   margin_top: 0,
   margin_bottom: 3,
 } %>
