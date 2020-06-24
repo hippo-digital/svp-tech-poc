@@ -2,6 +2,7 @@
 
 class OidcController < ApplicationController
   def callback
+    reset_session
     session[:auto_generated_data] = {
       example_1: 'Lorem ipsum est...',
       example_2: 'Something or other'
