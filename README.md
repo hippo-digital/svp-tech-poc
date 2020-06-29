@@ -36,6 +36,16 @@ Run the following to set up the local version of DynamoDB
 
 Run `rails server`
 
+### Viewing dynamodb records
+
+Perhaps the simplest way to view the records is via the CLI command
+
+```
+aws dynamodb scan --table-name svp-development --endpoint-url http://localhost:8000 --region 'eu-west-2'
+```
+
+Which will output the contents of the table in json format.
+
 ## Licence
 
 [MIT License](LICENCE)
