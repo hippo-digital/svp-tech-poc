@@ -51,9 +51,15 @@
 
 <%= tag.p t("check_your_answers.confirmation"), class: "govuk-inset-text" %>
 
-<%= render "govuk_publishing_components/components/button",
-  text: t("check_your_answers.submit"),
-  margin_bottom: true %>
+<%= form_tag({},
+  "data-module": "track-svp-form-people-check_your_answers",
+  "id": "check_your_answers",
+  "novalidate": "true"
+) do %>
+  <%= render "govuk_publishing_components/components/button",
+    text: t("check_your_answers.submit"),
+    margin_bottom: true %>
+<% end %>
 
 <%= render "govuk_publishing_components/components/button", {
         text: "Logout",
