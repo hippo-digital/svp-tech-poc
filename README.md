@@ -27,6 +27,13 @@ VTR: '["P0.Cp.Cd", "P0.Cp.Ck", "P0.Cm"]'
 SCOPES: 'openid profile'
 ```
 
+Run the following to set up the local version of DynamoDB
+
+```
+    docker pull amazon/dynamodb-local
+    docker run -d -p 8000:8000 amazon/dynamodb-local
+```
+
 Run `rails server`
 
 ## Licence
