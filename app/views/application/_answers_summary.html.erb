@@ -1,0 +1,31 @@
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("answers_summary.nhs_user_info_summary"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/summary_list", {
+  items: nhs_user_info_summary,
+} %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("answers_summary.form_info_heading"),
+  heading_level: 3,
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/summary_list", {
+  items: form_questions_summary,
+} %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("answers_summary.auto_generated_info_heading"),
+  heading_level: 3,
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/summary_list", {
+  items: auto_generated_data_summary,
+} %>
