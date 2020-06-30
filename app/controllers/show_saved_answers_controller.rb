@@ -1,0 +1,2 @@
+class ShowSavedAnswersController < ApplicationController
+end

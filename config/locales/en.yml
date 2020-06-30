@@ -47,6 +47,9 @@ en:
     help_with_food_delivery:
       required:
         label: 'Help with food delivery required'
+  show_saved_answers:
+    title: You have already submitted this form.
+    description: You may view your submitted answers here.
   check_your_answers:
     title: Are you ready to send your application?
     description: Check your answers first.

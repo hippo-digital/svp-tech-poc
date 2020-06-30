@@ -9,7 +9,7 @@ class OidcController < ApplicationController
     if saved_answer
       session[:saved_answer] = true
       session.update(saved_answer.FormResponse)
-      redirect_to check_your_answers_url
+      redirect_to show_saved_answers_url
     else
       session[:saved_answer] = false
 
