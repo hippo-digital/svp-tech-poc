@@ -7,8 +7,8 @@ class OidcController < ApplicationController
     session[:nhs_sub] = sub
     saved_answer = FormResponse.where(NHSSub: sub).first
     if saved_answer
-      session[:saved_answer] = true
       session.update(saved_answer.FormResponse)
+      session[:saved_answer] = true
       redirect_to show_saved_answers_url
     else
       session[:saved_answer] = false

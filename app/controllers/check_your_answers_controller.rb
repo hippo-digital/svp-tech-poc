@@ -26,7 +26,7 @@ class CheckYourAnswersController < ApplicationController
 
   def sanitised_session
     session_with_indifferent_access.except(
-      :session_id, :_csrf_token, :current_path, :previous_path, :check_answers_seen, :nhs_sub
+      :session_id, :_csrf_token, :current_path, :previous_path, :check_answers_seen, :nhs_sub, :saved_answer
     )
   end
 
