@@ -28,7 +28,11 @@ class HelpWithFoodDeliveryController < ApplicationController
   end
 
   def next_page_url
-    check_your_answers_url
+    if session[:saved_answer]
+      show_saved_answers_url
+    else
+      check_your_answers_url
+    end
   end
 
   def previous_path

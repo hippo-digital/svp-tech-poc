@@ -32,8 +32,7 @@ module AnswersSummaryHelper
       summary_entry(%w[address county], t('questions.address.county.label'), !session[:saved_answer]),
       summary_entry(%w[address postcode], t('questions.address.postcode.label'), !session[:saved_answer]),
       summary_entry(
-        %w[help_with_food_delivery required], t('answers_summary.help_with_food_delivery.required.label'),
-        !session[:saved_answer]
+        %w[help_with_food_delivery required], t('answers_summary.help_with_food_delivery.required.label'), true
       )
     ]
   end
