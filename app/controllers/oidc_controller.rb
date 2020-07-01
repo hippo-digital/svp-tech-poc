@@ -8,11 +8,11 @@ class OidcController < ApplicationController
       example_2: 'Something or other'
     }
     session[:userinfo] = request.env['omniauth.auth'].info
+    session[:nhs_sub] = request.env['omniauth.auth']['extra']['raw_info']['sub']
     redirect_to address_url
   end
 
-  def failure
-  end
+  def failure; end
 
   def logout
     reset_session
