@@ -18,6 +18,7 @@ Dynamoid.configure do |config|
     config.endpoint = 'http://localhost:8000'
     config.access_key = 'fakeMyKeyId'
     config.secret_key = 'fakeSecretAccessKey'
+    config.logger.level = :debug
     Rails.configuration.submissions_db_table_name = 'svp-development' if Rails.env.development?
   end
 end
