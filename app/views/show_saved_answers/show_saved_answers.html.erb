@@ -13,7 +13,18 @@
 
 <%= render "answers_summary" %>
 
+<%= form_tag({},
+  "data-module": "track-svp-form-people-check_your_answers",
+  "id": "check_your_answers",
+  "novalidate": "true"
+) do %>
+  <%= render "govuk_publishing_components/components/button",
+    text: t("show_saved_answers.submit"),
+    margin_bottom: true %>
+<% end %>
+
 <%= render "govuk_publishing_components/components/button", {
         text: "Logout",
         href: logout_path
 } %>
+

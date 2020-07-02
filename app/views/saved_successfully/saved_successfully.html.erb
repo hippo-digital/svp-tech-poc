@@ -1,0 +1,16 @@
+<% content_for :title do %><%= t("saved_successfully.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("saved_successfully.title") %>" />
+<% end %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("saved_successfully.title"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= render "govuk_publishing_components/components/button", {
+        text: "Logout",
+        href: logout_path
+} %>
+
