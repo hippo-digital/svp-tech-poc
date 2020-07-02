@@ -11,37 +11,7 @@
 
 <%= tag.p t("check_your_answers.description"), class: "govuk-body" %>
 
-<%= render "govuk_publishing_components/components/heading", {
-  text: t("check_your_answers.nhs_user_info_summary"),
-  margin_top: 0,
-  margin_bottom: 3,
-} %>
-
-<%= render "govuk_publishing_components/components/summary_list", {
-  items: nhs_user_info_summary,
-} %>
-
-<%= render "govuk_publishing_components/components/heading", {
-  text: t("check_your_answers.form_info_heading"),
-  heading_level: 3,
-  margin_top: 0,
-  margin_bottom: 3,
-} %>
-
-<%= render "govuk_publishing_components/components/summary_list", {
-  items: form_questions_summary,
-} %>
-
-<%= render "govuk_publishing_components/components/heading", {
-  text: t("check_your_answers.auto_generated_info_heading"),
-  heading_level: 3,
-  margin_top: 0,
-  margin_bottom: 3,
-} %>
-
-<%= render "govuk_publishing_components/components/summary_list", {
-  items: auto_generated_data_summary,
-} %>
+<%= render "answers_summary" %>
 
 <%= render "govuk_publishing_components/components/heading", {
   text: t("check_your_answers.send_heading"),

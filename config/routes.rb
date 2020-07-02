@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'user-details' => 'home#user_details'
   get 'check-your-answers' => 'check_your_answers#show'
   post 'check-your-answers' => 'check_your_answers#submit'
+  get 'show-saved-answers' => 'show_saved_answers#show'
   get '/logout' => 'oidc#logout'
 
   get 'auth/oidc', as: 'authentication'

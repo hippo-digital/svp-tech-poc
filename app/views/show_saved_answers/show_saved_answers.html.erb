@@ -1,0 +1,19 @@
+<% content_for :title do %><%= t("show_saved_answers.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("show_saved_answers.title") %>" />
+<% end %>
+
+<%= render "govuk_publishing_components/components/title", {
+  title: t("show_saved_answers.title"),
+  margin_top: 0,
+  margin_bottom: 3,
+} %>
+
+<%= tag.p t("show_saved_answers.description"), class: "govuk-body" %>
+
+<%= render "answers_summary" %>
+
+<%= render "govuk_publishing_components/components/button", {
+        text: "Logout",
+        href: logout_path
+} %>
