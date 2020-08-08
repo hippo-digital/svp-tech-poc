@@ -131,7 +131,7 @@ GEM
       aes_key_wrap
       bindata
     kgio (2.11.3)
-    kramdown (2.2.1)
+    kramdown (2.3.0)
       rexml
     link_header (0.0.8)
     listen (3.2.1)
